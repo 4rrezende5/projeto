@@ -1,0 +1,539 @@
+
+/* Estilo geral */
+*{
+    margin: 0;
+    padding: 0%;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    background-color: black;
+    height: 100vh;
+}
+
+.interface{
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.flex{
+    display: flex;
+   
+}
+
+.btn-contato button{
+    padding: 10px 40px;
+    font-size: 18px;
+    font-weight: 600;
+    background-color: #00ff08;
+    border: 0;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: .2s;
+}
+
+ button:hover, form .btn-enviar input:hover{
+    box-shadow: 0px 0px 9px #00ff08; /* Efeito de brilho sobre o botão "Contato" */
+    transform: scale(1.05); /* Efeito de brilho e zoom sobre o botão "Entrar em Contato" */
+}
+
+h2.titulo{
+    color: white;
+    font-size: 38px;
+    text-align: center;
+    margin-top: 100px;
+}
+
+h2.titulo span{
+    color: #00ff08;
+}
+
+
+/* Estilo do cabeçalho */
+header{
+padding: 40px 4%;
+}
+
+header > .interface{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Títulos do cabeçalho: Início, Especialidades, Projetos e Sobre */
+header a{
+    color: #5c5c5c;
+    text-decoration: none; /*Para tirar quaisquer detalhes da fonte, como sublinhado*/
+    display: inline-block;
+    transition: .3s;
+}
+
+header nav.menu-desktop a:hover{
+    color: #fff;
+    transform: scale(1.05); /*Scale(1.05) vai dar um zoom no título ao assar o cursor sobre o mesmo*/
+}
+
+header nav ul{
+    list-style-type: none;
+
+}
+
+header nav.menu-desktop ul li{
+    display: inline-block;
+    padding: 0 40px;
+}
+
+/* ESTLO DO MENU MOBILE - INÍCIO ********************************************/
+.btn-abrir-menu i{
+    color: #00FF08;
+    font-size: 40px;
+}
+
+.menu-mobile{
+    background-color: rgb(0, 0, 0);
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 99999; /* Este comando determina quem vai ficar encima de quem, e esse valor alto, significa que este elemento vai ficar aparecer sobre todos os outros elementos que possuem um valor menor que ele */
+    width: 0%;
+    overflow: hidden;
+    transition: .5s;
+}
+
+.menu-mobile.abrir-menu{
+    width: 70%;
+}
+
+/* Sombra no fundo ao abrir o menu mobile */
+/* Sempre que a classe (.abrir-menu) existir para o (.menu-mobile), significa que o (overlay-menu) a partir de agora terá a configuração abaixo: */
+.menu-mobile.abrir-menu ~ .overlay-menu-mobile{
+    display: block;
+}
+
+.menu-mobile .btn-fechar{
+    padding: 20px 5%;
+}
+
+.menu-mobile .btn-fechar i{
+    color: #00FF08;
+    font-size: 30px
+}
+
+.menu-mobile nav ul{
+    text-align: right;
+}
+
+.menu-mobile nav ul li a{
+    color: #fff;
+    font-size: 20px;
+    font-weight: 300;
+    padding: 20px 8%;
+    display: block; /*Seleleciona todo a linha na coluna da barra lateral */
+}
+
+.menu-mobile nav ul li a:hover{
+    background-color: #00FF08;
+    color: black;
+}
+
+.overlay-menu-mobile{
+    background-color: rgba(0, 0, 0, 0.554);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 88888;
+    display: none;
+}
+
+
+
+/* ESTILO DO MENU MOBILE - FIM ***********************************************/
+
+
+/* Estilo da imagem/png */
+.img{
+    width: 290px;
+}
+
+.img-topo-site{
+   display: flex;
+   width: 250px;
+}
+
+/* Estilo do topo do site */
+section.topo-do-site{
+    padding: 40px 4%;
+}
+
+/* Texto: h1 e parágrafo */
+section.topo-do-site .flex{ /* Alinha horizontalmente o h1 e do parágrafo */
+    align-items: center;
+    justify-content: center;
+    gap: 150px; /* Esta tag adiciona um espaçamento a partir do elemento*/
+}
+
+.topo-do-site h1{
+    color: white;
+    font-size: 30px;
+    line-height: 40px;
+}
+
+/* Cor do ponto final do h1 */
+.topo-do-site h1 span{
+    color: #00ff08;
+}
+
+.topo-do-site .txt-topo-site{
+    color: #ffffff;
+    margin: 40px 0;
+    text-align: justify;
+    
+}
+
+
+/* **Efeito flutuante de imagem Key Frames** */
+
+.topo-do-site .img-topo-site img{
+    position: relative;
+    animation: flutuar 1.5s ease-in-out infinite alternate;
+}
+
+@keyframes flutuar{
+    0%{
+        top: 0;
+    }
+    100%{
+        top: 30px;
+    }
+}
+
+/* Estilos das Especialidades */
+section.especialidades{
+    padding: 40px 4%;
+}
+
+/* Estilo da borda transparente entre o Website, Loja Online e Blog  */
+section.especialidades .flex{
+    gap: 60px;
+}
+
+.especialidades .especialidades-box{
+    color: rgb(255, 255, 255);
+    text-align: justify;
+    padding: 40px;
+    border-radius: 20px;
+    margin-top: 45px;
+    transition: .2s;
+}
+
+/* Efeito sombreado ao fundo das especialidades */
+.especialidades .especialidades-box:hover{
+    transform: scale(1.05);
+    box-shadow: 0 0 20px #fff;
+}
+
+/* Estilos dos icones das especialidades: Website, Loja Online e Blog */
+.especialidades .especialidades-box i{
+    font-size: 70px;
+    color: #00ff08;
+}
+
+/* Estilo do titulo h3: Website, Loja Online e Blog */
+.especialidades .especialidades-box h3{
+    font-size: 28px;
+    margin: 15px 0; /*Margem de 15px acima e abaixo do título e na lateral 0px */
+}
+
+
+/* Estilo Sobre */
+section.sobre{
+    padding: 100px 4%;
+}
+
+.will-img{
+    width: 350px;
+    border-radius: 15px;
+}
+
+section.sobre .flex{
+    align-items: center;
+    gap: 60px;
+}
+
+.sobre .txt-sobre{
+    color: #fff;
+}
+
+.sobre .txt-sobre h2{
+    font-size: 40px;
+    line-height: 40px; /* Via diminuir a distancia entre a linha de cima e a de baixo */
+    margin-bottom: 30px; /* Vai inserir um espaço baixo */
+}
+
+.sobre .txt-sobre h2 span{
+   color: #00ff08;
+   display: block; /* display: block => vai passar o span: "SOU WILLIANS ARREZENDES." para a linha de baixo */
+}
+
+.sobre .txt-sobre p{
+    margin: 20px 0; /* Vai inserir um espaço entre os dois parágrafos*/
+    text-align: justify; /* Vai alinhar todo o texto igualmente */
+}
+
+/* Estilo botão social (Insta, youtube e linkedin) */
+
+ .btn-social button{
+    background: #00FF08;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    border: none;
+    font-size: 25px; /* Vai aumentar o tamanho dos icones */
+    cursor: pointer;
+    margin: 0% 5px;
+    transition: .2s;
+}
+
+/* Estilo do Portfólio */
+
+section.portifolio{
+    padding: 80px 4%;
+    box-shadow: 0 0 40px 10px #ffffff3e; /* 0px de deslocamento horizontal, 0px de deslocamento vertical, desfoque de 40px e espalhamento de sombra de 10px */
+}
+
+section.portifolio .flex{
+    justify-content: space-around;
+    margin-top: 60px;
+}
+
+/* Estilo das imagens e efeito de rolagem 1/2*/
+.img-port{
+    width: 360px;
+    height: 460px;
+    background: #00FF08;
+    background-size: cover;
+    background-position: 100% 0%;
+    transition: 5s;
+    cursor: pointer;
+    border-radius: 35px;
+    position: relative;
+}
+
+/* Efeito de rolagem 2/2 */
+.img-port:hover{
+    background-position: 100% 100%;   
+}
+
+/* Essa estilização funciona sobre outra estilização, no caso sobre a (.img-port) */
+.overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #3434346f;
+    border-radius: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    font-weight: 600;
+    color: #fff;
+    opacity: 0;
+    transition: .5s;
+}
+
+.overlay:hover{
+    opacity: 1;
+}
+
+
+/* Estilo do formulário de contato */
+
+section.formulario{
+    padding: 80px 4%;
+    
+}
+
+form{
+    max-width: 500px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 40px;
+}
+
+form input, form textarea {
+    width: 100%;
+    color: #fff;
+    background-color: rgb(54, 54, 54);
+    border: 0;
+    outline: 0;
+    padding: 20px 15px;
+    border-radius: 15px;
+    font-size: 18px;
+}
+
+/* Estilizar a cor do placeholder: exemplo: "Seu nome completo"*/
+form input::placeholder{
+    color: #9a9a9a;
+}
+
+form textarea{
+    resize: none; /*Impede que a área da mensagem do formulário seja alterada */
+    max-height: 150px;
+}
+
+form .btn-enviar{
+    margin-top: 20px;
+    text-align: center;
+}
+
+/* Para especificar o input específico no qual deseja estilizar 
+=> form .btn-enviar input[type=submit] */
+
+form .btn-enviar input{
+    width: 120px;
+    background-color: #00FF08;
+    color: black;
+    font-weight: 600;
+    cursor: pointer;
+    transition: .2s;
+}
+
+
+/* Estilo do rodapé */
+footer .img-footer{
+    width: 150px;
+}
+
+footer{
+    padding: 60px 4%;
+    box-shadow: 0 0 40px 10px #ffffff3e;
+}
+
+footer .flex{
+    justify-content: space-between;
+}
+
+footer .line-footer{
+    padding: 20px 0;
+}
+
+.borda{
+    border-top: 4px solid #00FF08; /* Linha verde criada no rodapé da página  */
+}
+
+footer .line-footer p i{
+    color: #00FF08;
+    font-size: 22px;
+}
+
+footer .line-footer p a{
+    color: #fff;
+}
+
+@media screen and (max-width: 740px){
+
+
+    /* CABEÇALHO */
+    .menu-desktop, .btn-contato{
+        display: none;
+    }
+
+    /* CLASSES GERAIS ( COMANDOS FLEX) */
+    .flex{
+        flex-direction: column;
+    }
+
+    h2.titulo{
+        font-size: 34px;
+        line-height: 30px;
+        margin-top: 100px;
+    }
+
+    /* Para reverter o que vai aparecer primeiro no topo do site, entre a imagem ou o texto, selecione a classe e depois o comando */
+    .topo-do-site .flex{
+        flex-direction: column-reverse;
+    }
+
+    /* TÍTULO DO TOPO */
+
+    /* Espaço entre a imagem flutuante até o título: "Transformando idéias em realidade..." */
+    section.topo-do-site .flex{ /* Alinha horizontalmente o h1 e do parágrafo */
+        gap: 40px
+    }
+
+    section .topo-do-site{
+        padding: 20px 7%;
+    }
+
+    .topo-do-site h1{
+        font-size: 30px;
+        line-height: 30px;
+    }
+
+    .topo-do-site .img-topo-site img{
+        width: 100%;
+    }
+
+    /* Estilos das Especialidades */
+    section.especialidades{
+        padding: 40px 8%;
+    }
+
+    /* Estilo Sobre */
+    section.sobre{
+        padding: 100px 8%;
+    }
+
+    /* Estilo do título: sobre */
+    .sobre .txt-sobre h2{
+        font-size: 35px;
+        line-height: 35px; /* Via diminuir a distancia entre a linha de cima e a de baixo */
+        text-align: center;
+    }
+
+    /* Estilo botão social */
+    .btn-social{
+        text-align: center;
+    }
+
+    /* Estilo da imagem */
+    .will-img{
+        width: 100%;
+    }
+
+    /* Estilo do Portfólio */
+    section.portifolio{
+        padding: 80px 8%;
+    }
+
+    /* Estilo das imagens e efeito de rolagem do portfólio */
+    .img-port{
+        width: 100%;
+        max-width: 360px;
+        margin: 0 auto; /* Para centralizar o portfólio */
+    }
+
+    section.portifolio .flex{
+        gap: 35px;
+    }
+
+    /* Rodapé */
+    footer .flex{
+        flex-direction: column;
+        gap: 35px; /* Espaço entre a logo e os botões sociais */
+    }
+
+    footer .line-footer{
+        text-align: center;
+        margin-bottom: 20px;
+    }
+}

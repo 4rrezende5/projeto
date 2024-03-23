@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
+    <!-- FIM GOOGLE FONTS -->
+
+     <!-- BOOTSTRAP ICONS -->
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"> -->
+    <!-- FIM BOOTSTRAP ICONS -->
+    <title>Agência Will</title>
+    <link rel="stylesheet" href="style.css">
+
+    <script src="menu.js" defer></script>
+    <!-- Defer => é um requerimento que só vai permitir o carregamento do script após o carregamento do html  -->
+
+</head>
+
+<body>
+    <header>
+        <div class="interface"><!--Inteface início-->
+            <div class="logo"><!--Logo início-->
+                <a href="#">
+                    <img class="img" src="./img/logostem.png" alt="logo">
+                </a>
+            </div><!--Logo fim-->
+
+            <nav class="menu-desktop">
+                <ul>
+                    <li><a href="#">Início</a></li>
+                    <li><a href="">Especialidades</a></li>
+                    <li><a href="">Projetos</a></li>
+                    <li><a href="">Sobre</a></li>
+                </ul>
+
+                <div id="switch" onclick="toggleMode()">
+                    <button>Change Theme</button>
+                    <span></span>
+                </div>
+            </nav>
+
+            <div class="btn-contato">
+                <a href="#">
+                    <button>Contato</button>
+                </a>
+            </div><!--btn-contato fim-->
+
+            <div class="btn-abrir-menu" id="btn-menu">
+                <i class="bi bi-list"></i>
+            </div>
+
+            <div class="menu-mobile" id="menu-mobile">
+                <div class="btn-fechar">
+                    <i class="bi bi-x-lg"></i>
+                </div>
+
+                <nav>
+                    <ul>
+                        <li><a href="#">Início</a></li>
+                        <li><a href="#">Especialidades</a></li>
+                        <li><a href="#">Projetos</a></li>
+                        <li><a href="#">Sobre</a></li>
+                        <li><a href="#">Contato</a></li>
+                    </ul>
+
+                    <div id="switch" onclick="toggleMode()">
+                        <button>Change Theme</button>
+                        <span></span>
+                    </div>
+                </nav>
+
+            </div><!--menu-mobile fim-->
+
+            <div class="overlay-menu-mobile" id="overlay-menu-mobile">
+
+            </div><!--overlay-menu fim-->
+
+        </div><!--nteface fim-->
+    </header> 
+
+    <main>
+        <section class="topo-do-site">
+            <div class="interface">
+                <div class="flex">
+                    <div class="txt-topo-site">
+                        <h1>TRANSFORMANDO IDÉIAS<br> EM REALIDADE DIGITAL <SPAN>.</SPAN></h1><br>
+                        <p>Criatividade e inovação andam lado a lado. Com uma combinação única de design impactante, funcionalidade intuitiva e otimização para resultados, estou pronto para criar a presença online dos seus sonhos.</P><br>
+                        <div class="btn-contato">
+                            <a href="#">
+                                <button>Entrar em Contato</button>
+                            </a>
+                        </div>
+                    </div><!--txt-topo-site fim-->
+
+                    <div class="img-topo-site">
+                        <img class="img-topo-site" src="./img/robot.png" alt="">
+                    </div>
+
+                </div><!--flex fim-->
+            </div><!--inteface fim-->
+        </section><!--topo-do-site fim-->
+        <br>
+
+        <div class="especialidades">
+            <div class="interface">
+                <h2 class="titulo">MINHAS <span>ESPECIALIDADES.</span></h2>
+                <div class="flex">
+                    <div class="especialidades-box">
+                        <i class="bi bi-code-slash"></i>
+                        <h3>Website</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque accusantium nesciunt cum. Fugit consectetur nobis eligendi maiores distinctio vero earum? Ullam veritatis iure at vitae laboriosam repellat, porro libero? Necessitatibus!</p>
+                    </div><!--especialidades-box fim-->
+
+                    <div class="especialidades-box">
+                        <i class="bi bi-cart"></i>
+                        <h3>Loja Online</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque accusantium nesciunt cum. Fugit consectetur nobis eligendi maiores distinctio vero earum? Ullam veritatis iure at vitae laboriosam repellat, porro libero? Necessitatibus!</p>
+                    </div><!--especialidades-box fim-->
+
+                    <div class="especialidades-box">
+                        <i class="bi bi-wordpress"></i>
+                        <h3>Blog</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque accusantium nesciunt cum. Fugit consectetur nobis eligendi maiores distinctio vero earum? Ullam veritatis iure at vitae laboriosam repellat, porro libero? Necessitatibus!</p>
+                    </div><!--especialidades-box fim-->
+
+
+                </div><!--flex fim-->
+            </div><!--interface fim-->
+        </div><!--especialidades fim-->
+
+        <section class="sobre">
+            <div class="interface">
+                <div class="flex">
+                    <div class="img-sobre">
+                        <img src="./img/Will.jpg" class="will-img" alt="robot">
+                    </div><!--img-sobre fim-->
+
+                    <div class="txt-sobre">
+                        <h2>MUITO PRAZER, <span>SOU WILLIANS ARREZENDES.</span></h2>
+                        <p> Desde que me interessei pela área da progrmação, estudo bastante diariamente  para conseguir minha primeira oportunidade. Há  9 meses venho desenvolvendo diversos projetos para colocar em prática e fixar tudo o que aprendo, tenho certeza que estou pronto para somar  na sua equipe de programadores. Tenho facilidade de aprendizado, boa comunicação e a todo momento busco me aprimorar cada vez mais.   
+                        </p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.Exercitationem adipisci maxime laudantium veritatis reprehenderit ex culpa consequatur earum aut, facilis eius. Ex earum dolorem doloribus enim obcaecati cumque placeat expedita.
+                        </p>
+
+                        <div class="btn-social">
+                            <a href=""><button></button></a>
+                            <a href=""><button></button></a>
+                            <a href=""><button></button></a>
+                        </div>
+                    </div><!--txt-sobre fim-->
+
+                </div><!--flex fim-->
+            </div><!--interface fim-->
+        </section><!--sobre fim-->
+
+        <section class="portifolio">
+            <div class="interface">
+                <h2 class="titulo">MEU <span>PORTFÓLIO.</span></h2>
+                <div class="flex">
+                    <div class="img-port" style="background-image: url(img/farcry3.jfif);">
+                        <div class="overlay">Far Cry 3</div>
+                    </div>
+
+                    <div class="img-port" style="background-image: url(img/cyberpunk.jfif);">
+                        <div class="overlay">Cyberpunk 2077</div>
+                    </div>
+
+                    <div class="img-port" style="background-image: url(img/whatdogs.jpg);">
+                        <div class="overlay">Wath Dogs 2</div>
+                    </div>
+                </div><!--flex fim-->
+            </div><!--interface fim-->
+        </section><!--portifolio fim-->
+
+        <section class="formulario">
+            <div class="interface">
+                <h2 class="titulo">FALA <span>COMIGO.</span></h2>
+
+                <form action="">
+                    <input type="text" name="" id="" placeholder="Seu nome completo" required>
+                    <input type="text" name="" id="" placeholder="Seu e-mail" required>
+                    <input type="text" name="" id="" placeholder="Seu celular">
+                    <textarea name="" id="" placeholder="Sua mensagem" required></textarea>
+                    <div class="btn-enviar"><input type="submit" value="ENVIAR"></div>
+                </form>
+            </div><!--interface fim-->
+        </section><!--formulario fim-->
+
+    </main>
+    <footer>
+        <div class="interface">
+            <div class="line-footer">
+                <div class="flex">
+                    <div class="logo-footer">
+                        <img class="img-footer" src="img/logorobo.png" alt="">
+                    </div><!--logo-footer fim-->
+                    
+                    <div class="btn-social">
+                        <a href="#"><button><i class="bi bi-instagram"></i></button></a>
+                        <a href="#"><button><i class="bi bi-youtube"></i></button></a>
+                        <a href="#"><button><i class="bi bi-linkedin"></i></button></a>
+                    </div><!--btn-social fim-->
+                </div>
+            </div><!--line-footer fim-->
+
+            <div class="line-footer borda">
+                <p><i class="bi bi-envelope-fill"><a href="mailto:Contato@4rrezende5.com.br">Contato@4rrezende5.com.br</a></i></p>
+            </div><!--line-footer fim-->
+        </div><!--interface fim-->
+    </footer>
+
+    <script src="./menu.js"></script>
+</body>
+</html> v
